@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <script src="../static/js/jquery-3.2.1.js"></script>
+    <script src="./UserTreeView.min.js"></script>
+    <link href="./UserTreeView.min.css" rel="stylesheet" />
+
+    <title>用户自定义树形菜单</title>
+
+    <script type="text/javascript">
+
+        //初始化控件，调用定义的js
+
+        function initialize() {
+            data = {
+
+"tbFuncDic":
+
+    [
+
+        { "FunID": 14, "ParentID": 0, "FunName": "系统管理" },
+
+        { "FunID": 15, "ParentID": 14, "FunName": "用户管理" },
+
+        { "FunID": 16, "ParentID": 14, "FunName": "角色功能管理" },
+
+        { "FunID": 17, "ParentID": 14, "FunName": "角色管理" },
+
+        { "FunID": 18, "ParentID": 14, "FunName": "用户角色管理" },
+
+        { "FunID": 19, "ParentID": 14, "FunName": "部门管理" },
+
+        { "FunID": 20, "ParentID": 14, "FunName": "功能管理" },
+
+        { "FunID": 21, "ParentID": 0, "FunName": "公告管理" },
+
+        { "FunID": 22, "ParentID": 21, "FunName": "发公告" },
+
+        { "FunID": 23, "ParentID": 21, "FunName": "收公告" },
+
+        { "FunID": 24, "ParentID": 18, "FunName": "召回信息" },
+
+        { "FunID": 25, "ParentID": 18, "FunName": "投诉处理" },
+
+        { "FunID": 26, "ParentID": 0, "FunName": "种植企业" },
+
+        { "FunID": 27, "ParentID": 0, "FunName": "存储企业" },
+
+        { "FunID": 28, "ParentID": 0, "FunName": "加工企业" },
+
+        { "FunID": 29, "ParentID": 24, "FunName": "三级" },
+
+        { "FunID": 30, "ParentID": 24, "FunName": "三级" },
+
+        { "FunID": 31, "ParentID": 24, "FunName": "三级" },
+
+        { "FunID": 32, "ParentID": 31, "FunName": "四级" },
+
+        { "FunID": 33, "ParentID": 31, "FunName": "四级" },
+
+    ]
+
+}
+
+             databinding(data);//绑定数据
+
+           
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="parentnode">
+
+    </div>
+
+</body>
+
+</html>
