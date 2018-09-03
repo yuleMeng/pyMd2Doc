@@ -2,6 +2,9 @@
 import re
 import os
 import json
+import markdown
+import codecs
+
 pattern = '#+\s'
 
 heading = {
@@ -12,6 +15,24 @@ heading = {
         'heading5': -1,
         'heading6': -1
     }
+
+htmlHead = u'''
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+
+</style>
+<title>markdown转文档</title>
+</head>
+<body>
+'''
+
+htmlTail = u'''
+</body>
+</html>
+ '''
 
 
 def formatHeading():
@@ -29,8 +50,7 @@ def updateHeading(current, headId):
             heading['heading%r' % i] = headId
 
 
-def getMenu():
-    filename = os.getcwd()+'/title.md'
+def getMenu(filename):
     titles = []
     global heading
     global newHeading
@@ -88,25 +108,46 @@ def getMenu():
 def writeFile(datas):
     jsObj = json.dumps(datas)  
     fileObject = open('output/jsonFile.json', 'w')  
-    fileObject.write(jsObj)  
-    fileObject.close()  
+    fileObject.write(jsObj)
+    fileObject.close()
 
 
-# def addAnchorMark(titles, planId):
-#     filename = os.path.join(os.getcwd(), "html", "planReport_" + str(planId) + ".html")
-#     anchorHtml = u''
-#     with open(filename, 'r') as f:
-#         for i in f.readlines():
-#             for title in titles:
-#                 old = '>' + title['FunName'] + '<'
-#                 new = " id='a_" + str(
-#                     title['FunID']) + "'>" + title['FunName'] + "<"
-#                 old = old.replace("\r", "")
-#                 i = i.replace(old, new)
-#             anchorHtml += i.decode('utf8')
-#     return anchorHtml
+def addAnchorMark(titles, name):
+    filename = os.path.join(os.getcwd(), "html", name + ".html")
+    anchorHtml = u''
+    with open(filename, 'r', encoding='UTF-8') as f:
+        for i in f.readlines():
+            for title in titles:
+                old = '>' + title['titleName'] + '<'
+                new = " id='a_" + str(
+                    title['titleID']) + "'>" + title['titleName'] + "<"
+                old = old.replace("\r", "")
+                i = i.replace(old, new)
+            anchorHtml += i
+    # print(anchorHtml)
+    out_file = '%s.html' % (name)
+    output_file = codecs.open(out_file, "w", encoding="utf-8", errors="xmlcharrefreplace")
+    output_file.write(anchorHtml)
+    output_file.close()
+    return anchorHtml
+
+
+def convertHtml(filename):
+    in_file = '%s.md' % (filename)
+    out_file = '%s.html' % (filename)
+    input_file = codecs.open(in_file, mode="r", encoding="utf-8")
+    text = input_file.read()
+    html = markdown.markdown(text)
+    output_file = codecs.open(out_file, "w", encoding="utf-8", errors="xmlcharrefreplace")
+    output_file.write(htmlHead+html+htmlTail)
+    output_file.close()
 
 
 if __name__ == "__main__":
-    writeFile(getMenu())
-
+    filename = os.getcwd() + '/title.md'
+    # 解析markdown层级目录关系
+    # getMenu(filename)
+    # markdown转html（生成html）
+    convertHtml(os.getcwd() + '/title')
+    # 给html加锚标记
+    addAnchorMark(getMenu(filename), os.getcwd() + '/title')
