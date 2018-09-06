@@ -1,0 +1,247 @@
+.content {
+    background-color: #f5f5f5;
+    /* #F6F8F9 */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.parentnode
+
+{
+    width: 25%;
+    /* background-color:yellow; */
+    float:left;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #ffffff;
+}
+
+.right {
+    border: 2px solid #F6F8F9;
+    /* background-color:aqua; */
+    margin-left: 27%;
+    padding: 1px 50px;
+    background-color: #ffffff;
+}
+
+h2 {
+    margin-left: 5px;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+h4 {
+    margin-left: 15px;
+}
+
+h5 {
+    margin-left: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+bodt, html
+
+{
+
+    padding: 0;
+
+    margin: 0;
+
+    border: 0;
+
+    font-family: 'Microsoft YaHei';
+
+}
+
+ 
+
+.parentnode
+
+{
+
+    border: 2px solid F6F8F9;
+
+    /* width: 280px; */
+
+    position: relative;
+
+    text-align: left;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.09);
+
+    display: inline-block;
+
+    vertical-align: top;
+
+}
+
+ 
+
+.parentnode_noe
+
+{
+
+    /* width: 100%; */
+
+    padding-left: 20px;
+
+}
+
+ 
+
+.parentnode_title
+
+{
+
+    width: 100%;
+
+    padding: 2px;
+
+}
+
+ 
+
+.parentnode_title_fix
+
+{
+
+    height: 24px;
+
+    width: 18px;
+
+    float: left;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-position-x: center;
+
+    background-position-y: center;
+
+}
+
+ 
+
+.parentnode_title_symbol
+
+{
+
+    background-image: url("../image/minus.png");
+
+}
+
+ 
+
+    .parentnode_title_symbol:hover
+
+    {
+
+        cursor: pointer;
+
+    }
+
+ 
+
+    .parentnode_title_symbol b
+
+    {
+
+        display: none;
+
+    }
+
+ 
+
+.parentnode_title_check
+
+{
+
+    background-image: url("../../Image/iconUncheckAll.gif");
+
+}
+
+ 
+
+    .parentnode_title_check:hover
+
+    {
+
+        cursor: pointer;
+
+    }
+
+ 
+
+    .parentnode_title_check b
+
+    {
+
+        display: none;
+
+    }
+
+ 
+
+.parentnode_title_picture
+
+{
+
+    width: 24px;
+
+    height: 24px;
+
+    background-image: url("../../Image/folderClosed.gif");
+
+}
+
+ 
+
+.parentnode_title_nochildnode_symbol
+
+{
+
+    width: 18px;
+
+}
+
+ 
+
+.parentnode_title_nochildnode_picture
+
+{
+
+    width: 24px;
+
+    height: 24px;
+
+    background-image: url("../../Image/leaf.gif");
+
+}
+
+ 
+
+.parentnode_tow
+
+{
+
+    padding-left: 20px;
+
+}
+
+ 
+
+.parentnode_three
+
+{
+
+    padding-left: 20px;
+
+}

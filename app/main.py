@@ -21,12 +21,16 @@ htmlHead = u'''
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
-
-</style>
+<script src="../app/static/js/jquery-3.2.1.js"></script>
+<script src="../app/static/js/main.js"></script>
+<link href="../app/static/css/main.css" rel="stylesheet" />
+</head>
 <title>markdown转文档</title>
 </head>
 <body>
+    <div class="content">
+        <div class="parentnode"></div>
+        <div class="right">
 '''
 
 htmlTail = u'''
@@ -53,7 +57,6 @@ def updateHeading(current, headId):
 def getMenu(filename):
     titles = []
     global heading
-    global newHeading
     headId = 1
     current = None
     preCurrent = '$'
@@ -132,14 +135,16 @@ def addAnchorMark(titles, name):
     return anchorHtml
 
 
-def convertHtml(filename):
+def convertHtml(filename, json):
     in_file = '%s.md' % (filename)
     out_file = '%s.html' % (filename)
     input_file = codecs.open(in_file, mode="r", encoding="utf-8")
     text = input_file.read()
     html = markdown.markdown(text)
     output_file = codecs.open(out_file, "w", encoding="utf-8", errors="xmlcharrefreplace")
-    output_file.write(htmlHead+html+htmlTail)
+    
+    htmlJson = u" </div> </div><input style='display: none' id='jsonContent' value='"+ json  +"'></input>"
+    output_file.write(htmlHead+html+htmlJson+htmlTail)
     output_file.close()
 
 
@@ -148,6 +153,6 @@ if __name__ == "__main__":
     # 解析markdown层级目录关系
     # getMenu(filename)
     # markdown转html（生成html）
-    convertHtml(os.getcwd() + '/title')
+    convertHtml(os.getcwd() + '/title', json.dumps(getMenu(filename)))
     # 给html加锚标记
     addAnchorMark(getMenu(filename), os.getcwd() + '/title')
