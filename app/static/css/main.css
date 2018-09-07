@@ -1,14 +1,16 @@
 .content {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     /* #F6F8F9 */
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 5%;
     padding-right: 5%;
+    background-color: #f1f8ff;
+    border: 1px solid #c8e1ff;
+    /* font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu; */
 }
 
 .parentnode
-
 {
     width: 25%;
     /* background-color:yellow; */
@@ -16,15 +18,27 @@
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #d1d5da;
 }
 
 .right {
-    border: 2px solid #F6F8F9;
+    /* border: 2px solid #F6F8F9; */
     /* background-color:aqua; */
     margin-left: 27%;
     padding: 1px 50px;
     background-color: #ffffff;
+    border: 1px solid #d1d5da;
 }
+
+/* pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+} */
 
 h2 {
     margin-left: 5px;
@@ -46,6 +60,15 @@ a:link {
     text-decoration: none;
 }
 
+p {
+    background: #f2f2f2;
+    padding: 20px 15px;
+    font-size: 14px;
+    text-indent:25px;
+    background-color: #f6f8fa;
+    line-height: 1.25;
+    /* letter-spacing:1px; */
+}
 bodt, html
 
 {
@@ -59,9 +82,6 @@ bodt, html
     font-family: 'Microsoft YaHei';
 
 }
-
- 
-
 .parentnode
 
 {
