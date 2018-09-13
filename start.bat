@@ -1,6 +1,12 @@
-@echo off  
-D:\test\mechine_learning\venv\Scripts\pip install -r requirements.txt
-cd D:\workspace\pyMarkdown-master\app
-D:\test\mechine_learning\venv\Scripts\python main.py
-ECHO pyMd2Doc is execute successfully!!!
+@echo off
+
+REM --------------------修改start------------------------------
+set python_env=D:\test\mechine_learning\venv\Scripts
+set pyMd2Doc_path=D:\workspace\pyMarkdown-master\app
+REM --------------------修改end------------------------------
+
+%python_env%\pip install -r requirements.txt
+cd %pyMd2Doc_path%
+%python_env%\python main.py
+
 pause
