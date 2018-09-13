@@ -292,8 +292,12 @@ function Cycledata(parentnodediv, data) {
 
     parentnode_title_name.className = "parentnode_title_name";//为div添加class
 
-   parentnode_title_name.innerHTML = "<a href='#a_" + data.titleID + "' title='" + data.titleName + "'>" + data.titleName.substr(0,30) + '...'  + "</a>";//为div添加class
-
+    if ( data.titleName.length > 30) {
+        parentnode_title_name.innerHTML = "<a href='#a_" + data.titleID + "' title='" + data.titleName + "'>" + data.titleName.substr(0,30) + '...'  + "</a>";//为div添加class
+    } else {
+        parentnode_title_name.innerHTML = "<a href='#a_" + data.titleID + "' title='" + data.titleName + "'>" + data.titleName + "</a>";//为div添加class
+    }
+    
     parentnode_title_name.id = data.titleID;//为div添加ID
     // parentnode_title_name.setAttribute("href", "#a_" + data.titleID);
     parentnode_title_name.setAttribute("name", data.parentID);
