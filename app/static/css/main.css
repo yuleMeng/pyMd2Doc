@@ -1,44 +1,36 @@
 .content {
-    /* background-color: #f5f5f5; */
-    /* #F6F8F9 */
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 5%;
     padding-right: 5%;
-    background-color: #f1f8ff;
-    border: 1px solid #c8e1ff;
-    /* font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu; */
+    /* background-color: #f1f8ff; */
+    /* background-color: #BFE6D7; */
+    background-color: #e2e2e2;
 }
 
 .parentnode
 {
     width: 25%;
-    /* background-color:yellow; */
     float:left;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #ffffff;
+    background-color: #f1f8ff;
     font-size: 15px;
-    border: 1px solid #d1d5da;
+    border: 2px solid #008151;
 }
 
 .right {
-    /* border: 2px solid #F6F8F9; */
-    /* background-color:aqua; */
     margin-left: 27%;
     padding: 1px 50px;
-    background-color: #ffffff;
-    border: 1px solid #d1d5da;
+    background-color: #f1f8ff;
+    border: 2px solid #008151;
 }
 
-/* pre {
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f6f8fa;
-    border-radius: 3px;
-} */
+.parentnode a
+{
+    color: #009a61;
+    font-weight: bold;
+}
 
 h2 {
     margin-left: 5px;
@@ -61,93 +53,53 @@ a:link {
 }
 
 p {
-    background: #f2f2f2;
     padding: 20px 15px;
     font-size: 14px;
     text-indent:25px;
-    background-color: #f6f8fa;
-    line-height: 1.25;
-    /* letter-spacing:1px; */
+    background: #cce8cf;
+    line-height: 1.4;
 }
-bodt, html
 
+
+body, html
 {
-
     padding: 0;
-
     margin: 0;
-
     border: 0;
-
     font-family: 'Microsoft YaHei';
-
 }
+
 .parentnode
-
 {
-
     border: 2px solid F6F8F9;
-
-    /* width: 280px; */
-
     position: relative;
-
     text-align: left;
-
     box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.09);
-
     display: inline-block;
-
     vertical-align: top;
-
 }
-
- 
 
 .parentnode_noe
-
 {
-
-    /* width: 100%; */
-
     padding-left: 20px;
-
 }
-
- 
 
 .parentnode_title
-
 {
-
     width: 100%;
-
     padding: 2px;
-
 }
-
- 
 
 .parentnode_title_fix
-
 {
-
     height: 24px;
-
     width: 18px;
-
     float: left;
-
     background-repeat: no-repeat;
-
     background-position: center;
-
     background-position-x: center;
-
     background-position-y: center;
-
 }
-
  
 
 .parentnode_title_symbol
