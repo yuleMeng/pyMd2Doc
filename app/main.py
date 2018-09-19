@@ -148,11 +148,15 @@ def convertHtml(filename, json):
     output_file.close()
 
 
-if __name__ == "__main__":
-    filename = os.getcwd() + '/title.md'
-    # 解析markdown层级目录关系
-    # getMenu(filename)
+def create(fileName):
+    filePath = os.getcwd() + '/' + fileName
+    mdFile = filePath + '.md'
+    menu = getMenu(mdFile)
     # markdown转html（生成html）
-    convertHtml(os.getcwd() + '/title', json.dumps(getMenu(filename)))
+    convertHtml(filePath, json.dumps(menu))
     # 给html加锚标记
-    addAnchorMark(getMenu(filename), os.getcwd() + '/title')
+    addAnchorMark(menu, filePath)
+
+
+if __name__ == "__main__":
+    create("content")
