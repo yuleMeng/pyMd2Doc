@@ -36,16 +36,10 @@
 > 新建[yourFileName].py文件,准备所需要转换的markdown文件，如myMarkdown.md
 > 引入所需模块,调用函数并传入需要转换的markdown文件，如下示例：
 
-''' python
-
-#固定写法，需要引用pyMd2Doc的模块
 from pymd2doc import createDoc
 
-# 要转换的markdown文件，如myMarkdown.md
-#双引号内为要转换的markdown文件名称
 createDoc.create("myMarkdown")
 
-'''
 > 执行成功后会生成myMarkdown.html文件
 
 
