@@ -30,15 +30,17 @@
 准备好需要转成文档的Markdown文件。
 
 ## 2.2 安装pyMd2Doc
-用pip install pyMd2Doc 安装程序
+用如下命令安装程序
+
+	pip install pyMd2Doc
 
 ## 2.3 开始转换
 > 新建[yourFileName].py文件,准备所需要转换的markdown文件，如myMarkdown.md
 > 引入所需模块,调用函数并传入需要转换的markdown文件，如下示例：
 
-from pymd2doc import createDoc
+	from pymd2doc import createDoc
 
-createDoc.create("myMarkdown")
+	createDoc.create("myMarkdown")
 
 > 执行成功后会生成myMarkdown.html文件
 
