@@ -34,16 +34,39 @@
 
 	pip install pyMd2Doc
 
+
 ## 2.3 开始转换
+以下暂时提供两种转换方法
+
+### 2.3.1 md文件转html
 > 新建[yourFileName].py文件,准备所需要转换的markdown文件，如myMarkdown.md
 > 引入所需模块,调用函数并传入需要转换的markdown文件，如下示例：
 
 	from pymd2doc import createDoc
-
+	
+	# param myMarkdown 传入MD文件名（生成html默认和MD文件名一致）
+	# return myMarkdown.html
 	createDoc.create("myMarkdown")
+
 
 > 执行成功后会生成myMarkdown.html文件
 
+
+### 2.3.2 String型的md内容转html
+> 引入所需模块,调用函数并传入需要转换的markdown文件
+> 传入String型的md内容，如下示例：
+
+	from pymd2doc import createDoc
+	
+	str = u'''
+		此处是String型的md内容
+		'''
+	# param strs 传入MD字符串
+	# param myMarkdown 定义将要生成html文件名称
+	# return myMarkdown.html
+	createDoc.createByString(strs, "myMarkdown")
+	
+> 执行成功后会生成myMarkdown.html文件
 
 ## 2.4 查看文档
 用浏览器打开刚刚生成的myMarkdown.html文件。
