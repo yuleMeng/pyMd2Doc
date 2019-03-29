@@ -158,5 +158,27 @@ def create(fileName):
     addAnchorMark(menu, filePath)
 
 
+# ########################## 读String写入临时文件 ###########################
+def createTempMd(strs, filename):
+    with open(filename, "w", encoding='utf-8') as f:
+        f.write(strs)
+
+
+def createByString(content, newFile):
+    filePath = os.getcwd() + '/' + newFile + ".md"
+    createTempMd(content, filePath)
+    create(newFile)
+    deleFile(filePath)
+
+
+def deleFile(filePath):
+    # 如果文件存在
+    if os.path.exists(filePath):
+        # 删除文件
+        os.remove(filePath)
+    else:
+        print('no such file:%s' % filePath)
+
+
 if __name__ == "__main__":
     create("content")
