@@ -53,7 +53,7 @@
 
 
 ### 2.3.2 String型的md内容转html
-> 引入所需模块,调用函数并传入需要转换的markdown文件
+> 引入所需模块,调用函数
 > 传入String型的md内容，如下示例：
 
 	from pymd2doc import createDoc
