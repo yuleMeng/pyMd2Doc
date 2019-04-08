@@ -1,5 +1,5 @@
 # 1. github版本pyMd2Doc介紹
-
+将md格式转化为html格式，可用于一般md文档转html,md电子书转html,快速制作电子书。
 
 # 2. 使用方法
 该程序所需python环境为python3或以上。
