@@ -49,7 +49,9 @@
 	createDoc.create("myMarkdown")
 
 
-> 执行成功后会生成myMarkdown.html文件
+> 执行成功后会生成myMarkdown.html文件,以及一个static文件夹。
+> myMarkdown.html： 转换成的html内容
+> static文件夹： 支持myMarkdown.html的静态文件，如js,css,icon
 
 
 ### 2.3.2 String型的md内容转html
@@ -66,8 +68,11 @@
 	# return myMarkdown.html
 	createDoc.createByString(strs, "myMarkdown")
 	
-> 执行成功后会生成myMarkdown.html文件
+> 执行成功后会生成myMarkdown.html文件,以及一个static文件夹。
+> myMarkdown.html： 转换成的html内容
+> static文件夹： 支持myMarkdown.html的静态文件，如js,css,icon
 
 ## 2.4 查看文档
 用浏览器打开刚刚生成的myMarkdown.html文件。
 点击目录可以跳转到相应文档内容。
+如果目录有子目录可以进行收缩
