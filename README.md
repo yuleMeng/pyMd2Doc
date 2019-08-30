@@ -76,3 +76,6 @@
 用浏览器打开刚刚生成的myMarkdown.html文件。
 点击目录可以跳转到相应文档内容。
 如果目录有子目录可以进行收缩
+
+图片示例：
+![image](https://img-blog.csdnimg.cn/20190613150808883.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1bGVfbWVuZw==,size_16,color_FFFFFF,t_70)
